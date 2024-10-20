@@ -7,6 +7,8 @@ import tailwind from "@astrojs/tailwind";
 
 import node from "@astrojs/node";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -22,7 +24,5 @@ export default defineConfig({
     serverIslands: true,
   },
 
-  adapter: node({
-    mode: "standalone",
-  }),
+  adapter: vercel(),
 });
